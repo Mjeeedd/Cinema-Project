@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coming Soon - CinemaX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="coming-soon.css">
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+    
+<div class="side-menu" id="sideMenu">
+  <div class="close-button" onclick="toggleSideMenu()">
+    <i class="fas fa-times"></i>
+  </div>
+  
+  <div class="user-section">
+    <div class="user-details">
+      <div class="user-icon-wrapper">
+        <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Avatar" class="user-icon">
+      </div>
+      <div class="user-info">
+        <p class="username">Guest User</p>
+        <p class="user-status">Not logged in</p>
+      </div>
+    </div>
+    <a href="login.html" class="login-button">Sign In / Register</a>
+  </div>
+
+  
+  <div class="menu-category">
+    <h3 class="category-title">My Account</h3>
+    <ul class="side-links">
+      <li><a href="#"><i class="fas fa-ticket-alt"></i> My Tickets</a></li>
+      <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+      <li><a href="#"><i class="fas fa-history"></i> Watch History</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+    </ul>
+  </div>
+  
+  <div class="menu-category">
+    <h3 class="category-title">Information</h3>
+    <ul class="side-links">
+      <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      <li><a href="#"><i class="fas fa-map-marker-alt"></i> Theaters</a></li>
+    </ul>
+  </div>
+  
+  <div class="side-menu-footer">
+    <p>© 2025 CinemaX</p>
+    <p class="version-info">App Version 2.1.0</p>
+  </div>
+</div>
+  </header>
+
+
+  <!-- Movie Info -->
+  <div class="movie-container">
+    <img id="movieImg" src="" alt="Coming Soon Poster" />
+    <div class="movie-info">
+      <h2 id="movieTitle">Coming Soon</h2>
+
+      <div class="movie-meta">
+        <div><i class="fas fa-film"></i><span id="movieGenre">Genre</span></div>
+        <div><i class="far fa-clock"></i><span id="movieDuration">Duration</span></div>
+      </div>
+
+      <p class="movie-description" id="movieDescription">
+        Movie description will appear here.
+      </p>
+
+      <div class="cast">
+        <h3><i class="fas fa-users"></i> Cast</h3>
+        <div class="cast-list" id="castList">
+          <!-- Cast items will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <button onclick="window.location.href='index.html'">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </button>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p>Phone: <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <!-- Script to load movie data -->
+  <script src="../js/coming-soon.js"> </script>
+
+</body>
+</html>

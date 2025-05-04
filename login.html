@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePrime | Member Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome again!</h1>
+        <div class="logo">
+            <i class="fas fa-film"></i>Cinema
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <div class="input-icon" id="username-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <input type="text" id="username" placeholder="Your Email" required>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-icon" id="password-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <input type="password" id="password" placeholder="Your Password" required>
+                <div class="password-toggle" id="password-toggle">
+                    <i class="fas fa-eye"></i>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">Sign In</button>
+            
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a href="#" id="registerLink">Register Now</a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="register-container" id="registerContainer">
+        <h1>Create a New Account</h1>
+        <div class="logo">
+            <i class="fas fa-film"></i>Cinema
+        </div>
+        
+        <form class="register-form" id="registerForm">
+            <div class="name-row">
+                <div class="form-group">
+                    <div class="input-icon" id="first-name-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" id="fir-name" placeholder="First name" required>
+                    <div class="error-message" id="first-name-error"></div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon" id="last-name-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" id="last-name" placeholder="Last name" required>
+                    <div class="error-message" id="last-name-error"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-icon" id="reg-email-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <input type="email" id="reg-email" placeholder="Email Address" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-icon" id="reg-password-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <div class="password-toggle" id="reg-password-toggle">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="error-message" id="password-error"></div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-icon" id="reg-confirm-password-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <input type="password" id="reg-confirm-password" placeholder="Confirm Password" required>
+                <div class="password-toggle" id="reg-confirm-password-toggle">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="error-message" id="confirm-password-error"></div>
+            </div>
+            
+            <div class="terms-checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">By registering, I agree to the <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and <a href="#">Member Conditions</a></label>
+            </div>
+            
+            <button type="submit" class="btn">Register</button>
+            
+            <div class="links">
+                <a href="#" id="backToLogin">Back to Login</a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="cinema-background">
+        <img src="cinema.png" alt="Cinema Background" class="movie-slideshow" id="bb">
+        
+        <div class="offers member-benefits" id="member-benefits">
+            <h2>Exclusive Member Benefits</h2>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="offer-text">
+                    Premium members enjoy 20% off all concessions and priority seating for all screenings.
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-calendar-star"></i>
+                </div>
+                <div class="offer-text">
+                    Early access to ticket sales for blockbuster premieres and special events.
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="offer-text">
+                    Free birthday ticket and surprise gifts throughout the year.
+                </div>
+            </div>
+        </div>
+        
+        <div class="offers registration-benefits" id="registration-benefits">
+            <h2>Why Register With Us?</h2>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <div class="offer-text">
+                    Get exclusive discounts on tickets and concessions throughout the year, with special member-only pricing.
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="offer-text">
+                    Reserve seats for popular screenings before they sell out with our priority booking system.
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                <div class="offer-text">
+                    Celebrate your birthday with a complimentary premium cinema experience and exclusive lounge access.
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="offer-text">
+                    Stay updated with personalized notifications about movies you'll love and special member events.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ticker-container">
+        <div class="ticker">
+            <div class="ticker-item">
+                <i class="fas fa-star ticker-icon"></i>
+                <span>NOW PLAYING: Award-winning films in Dolby Cinema - Book your experience today!</span>
+            </div>
+            <div class="ticker-item">
+                <i class="fas fa-ticket-alt ticker-icon"></i>
+                <span>LIMITED TIME: 25% off matinee shows Monday-Thursday</span>
+            </div>
+            <div class="ticker-item">
+                <i class="fas fa-video ticker-icon"></i>
+                <span>COMING SOON: The most anticipated films of the year - Watch the trailers now!</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>

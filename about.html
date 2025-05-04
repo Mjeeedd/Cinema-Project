@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - CinemaX</title>
+  
+  <!-- EXTERNAL RESOURCES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="about.css" />
+  <script src="index.js"></script>
+  <script src="about.js"></script>
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- Menu Toggle Button -->
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+
+      <!-- Logo Container -->
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <!-- Close Button -->
+      <div class="close-button" onclick="toggleSideMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <!-- User Section -->
+      <div class="user-section">
+        <div class="user-details">
+          <div class="user-icon-wrapper">
+            <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Avatar" class="user-icon">
+          </div>
+          <div class="user-info">
+            <p class="username">Guest User</p>
+            <p class="user-status">Not logged in</p>
+          </div>
+        </div>
+        <a href="login.html" class="login-button">Sign In / Register</a>
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-category">
+        <h3 class="category-title">My Account</h3>
+        <ul class="side-links">
+          <li id="myTicketsBtn"><a href="#"><i class="fas fa-ticket-alt"></i> My Tickets</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+          <li><a href="#"><i class="fas fa-history"></i> Watch History</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="category-title">Information</h3>
+        <ul class="side-links">
+          <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Theaters</a></li>
+        </ul>
+      </div>
+
+      <!-- Side Menu Footer -->
+      <div class="side-menu-footer">
+        <p>© 2025 CinemaX</p>
+        <p class="version-info">App Version 2.1.0</p>
+      </div>
+    </div>
+  </header>
+
+    <!-- ===== HERO SECTION ===== -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <h1>Welcome to CinemaX</h1>
+      <p>Your ultimate destination for movie exploration, reviews, and cinematic experiences</p>
+    </div>
+  </section>
+
+  <!-- ===== VISION SECTION ===== -->
+  <section class="vision-section">
+    <div class="container">
+      <h2>Our Cinema Vision</h2>
+      <div class="vision-content">
+        <div class="vision-text">
+          <p>At CinemaX, we believe that cinema is more than just entertainment—it's an art form that can inspire, educate, and transform. We've created a platform that not only lets you discover and watch movies but also understand them at a deeper level.</p>
+          <p>Our mission is to provide a curated selection of films with comprehensive analysis, thoughtful categorization, and personalized recommendations that help you find movies that match your unique taste.</p>
+        </div>
+        <div class="vision-image">
+          <img src="cinema.jpg" alt="Cinema Vision">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="stats-section">
+    
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-item">
+          <i class="fas fa-film"></i>
+          <div class="stat-count" data-count="5000">0</div>
+          <div class="stat-label">Movies Available</div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-tags"></i>
+          <div class="stat-count" data-count="120">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <div class="stat-count" data-count="15000">0</div>
+          <div class="stat-label">Reviews</div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-users"></i>
+          <div class="stat-count" data-count="8000">0</div>
+          <div class="stat-label">Happy Users</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="features-gallery">
+    <div class="container">
+      <h2>Explore Our Sections</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="spaider.jpeg" alt="New Releases">
+          <div class="gallery-overlay">
+            <h3>New Releases</h3>
+            <p style="margin-bottom: 50px;">Discover the latest films hitting the screens</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="bad.jpeg" alt="Classics">
+          <div class="gallery-overlay">
+            <h3>Action</h3>
+            <p style="margin-bottom: 50px;">Explosive thrills and high-octane heroics in our newest releases.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="inter.jpeg" alt="Independent Films">
+          <div class="gallery-overlay">
+            <h3>Fantasy</h3>
+            <p style="margin-bottom: 50px;"> Escape to magical realms with epic new adventures.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="Ghosts.jpeg" alt="Film Critique">
+          <div class="gallery-overlay">
+            <h3>Horror</h3>
+            <p style="margin-bottom: 50px;">Fresh nightmares await in chilling new films.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US SECTION ===== -->
+  <section class="why-us">
+    <div class="container">
+      <h2>Why Choose CinemaX?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tv"></i>
+          </div>
+          <h3>HD Quality</h3>
+          <p>Experience films in stunning high definition with crisp visuals and immersive sound</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-list-ul"></i>
+          </div>
+          <h3>Precision Categories</h3>
+          <p>Find exactly what you're looking for with our detailed genre and mood categorization</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Regular Updates</h3>
+          <p>We add new content daily to keep our library fresh and exciting</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <h3>Personalized Recommendations</h3>
+          <p>Our algorithm learns your preferences to suggest films you'll love</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM SECTION ===== -->
+  <section class="team-section">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <div class="movie-ticket">
+            <div class="ticket-header">
+              
+              <div class="ticket-id">ID: 2340387</div>
+            </div>
+            <div>
+              <i class="fas fa-user person-icon"></i>
+            </div>
+            <div class="ticket-info">
+              <h3>Abdulmajeed Ahmed Alhelali</h3>
+              <p class="role">Frontend Developer</p>
+              <p class="role">Content Manager</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="movie-ticket">
+            <div class="ticket-header">
+              
+              <div class="ticket-id">ID: 2340475</div>
+            </div>
+            <div class="ticket-image">
+              <i class="fas fa-user person-icon"></i>
+            </div>
+            <div class="ticket-info">
+              <h3>Sultan Abdullah Khurmi</h3>
+              <p class="role">Backend Developer</p>
+              <p class="role">Frontend Developer</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="movie-ticket">
+            <div class="ticket-header">
+              
+              <div class="ticket-id">ID: 2340476</div>
+            </div>
+            <div class="ticket-image">
+              <i class="fas fa-user person-icon"></i>
+            </div>
+            <div class="ticket-info">
+              <h3>Azzam Khalid Al Ghamdi</h3>
+              <p class="role">Frontend Developer</p>
+              <p class="role">Content Manager</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="movie-ticket">
+            <div class="ticket-header">
+              
+              <div class="ticket-id">ID: 2341063</div>
+            </div>
+            <div class="ticket-image">
+              <i class="fas fa-user person-icon"></i>
+            </div>
+            <div class="ticket-info">
+              <h3>Majid Mohammed Alsaedi</h3>
+              <p class="role">Backend Developer</p>
+              <p class="role">Frontend Developer</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="movie-ticket">
+            <div class="ticket-header">
+             
+              <div class="ticket-id">ID: 2340515</div>
+            </div>
+            <div class="ticket-image">
+              <i class="fas fa-user person-icon"></i>
+            </div>
+            <div class="ticket-info">
+              <h3>Mohannad Abdullah Alshehri</h3>
+              <p class="role">Frontend Developer</p>
+              <p class="role">Content Manager</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I create an account?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Creating an account is easy! Just click on the "Sign Up" button in the top right corner and follow the simple registration process. It only takes a minute, and you'll immediately gain access to all our features.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What video quality do you offer?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>We offer movies in various quality options, including 4K, 1080p, and 720p, depending on your internet connection and device capabilities. All our premium content is available in the highest possible quality.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I create a watchlist?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>To create a watchlist, simply browse the movies and click the "Add to Watchlist" button on any film you'd like to save for later. You can access and manage your watchlists from your profile page.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are there any subscription plans?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>  
+          <div class="faq-answer">
+            <p>Yes! We offer flexible subscription plans to suit your needs. You can choose between monthly or annual plans, with discounts for long-term commitments. We also offer a free tier with limited access to our content library.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I download movies to watch offline?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Our premium subscribers can download select movies and shows to watch offline on our mobile apps. Downloads are available for 48 hours after you start watching.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p> <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p> <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

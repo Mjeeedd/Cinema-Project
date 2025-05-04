@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+      <div class="logo-container">
+        <a href="../pages/index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="side-menu" id="sideMenu">
+    <div class="close-button" onclick="toggleSideMenu()">
+      <i class="fas fa-times"></i>
+    </div>
+    
+    <div class="user-section">
+      <div class="user-details">
+        <div class="user-icon-wrapper">
+          <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Avatar" class="user-icon">
+        </div>
+        <div class="user-info">
+          <p class="username">Guest User</p>
+          <p class="user-status">Not logged in</p>
+        </div>
+      </div>
+      <a href="../pages/login.html" class="login-button">Sign In / Register</a>
+    </div>
+
+    <div class="menu-category">
+      <h3 class="category-title">My Account</h3>
+      <ul class="side-links">
+        <li><a href="#"><i class="fas fa-ticket-alt"></i> My Tickets</a></li>
+        <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+        <li><a href="#"><i class="fas fa-history"></i> Watch History</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </div>
+    
+    <div class="menu-category">
+      <h3 class="category-title">Information</h3>
+      <ul class="side-links">
+        <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Theaters</a></li>
+      </ul>
+    </div>
+    
+    <div class="side-menu-footer">
+      <p>© 2025 CinemaX</p>
+      <p class="version-info">App Version 2.1.0</p>
+    </div>
+  </div>
+
+  <div class="movie-container">
+    <img id="movieImg" src="" alt="Movie Poster" />
+    <div class="movie-info">
+      <h2 id="movieTitle"></h2>
+
+      <div class="movie-meta">
+        <div><i class="fas fa-film"></i> <span id="movieGenre"></span></div>
+        <div><i class="far fa-clock"></i> <span id="movieDuration"></span></div>
+      </div>
+
+      <p id="movieDescription"></p>
+
+      <div class="cast">
+        <h4><i class="fas fa-users"></i> Cast:</h4>
+        <ul id="castList" class="cast-list"></ul>
+      </div>
+
+      <form action="seats.html" method="GET">
+        <label for="date"><i class="far fa-calendar-alt"></i> Choose Date:</label>
+        <select name="date" id="date"></select>
+
+        <label for="time"><i class="far fa-calendar-alt"></i> Choose Time:</label>
+        <select name="date" id="time"></select>
+
+        <label for="location"><i class="fas fa-map-marker-alt"></i> Choose Location:</label>
+        <select name="location" id="location">
+          <option>AL-Yasmeen Mall</option>
+        </select>
+
+        <input type="hidden" name="title" id="hiddenTitle" />
+        <input type="hidden" name="img" id="hiddenImg" />
+        <button type="submit" id="submit"><i class="fas fa-ticket-alt"></i> Proceed to Seats</button>
+      </form>
+    </div>
+  </div>
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Alert !</h2>
+      <p>You have to login first to select seats</p>
+      <div class="modal-buttons">
+        <button onclick="goToLogin()">Login</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-home">
+    <button onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Back to Home</button>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p>Phone: <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="movie.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinema News</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="news.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="close-button" onclick="toggleSideMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+    
+      <div class="user-section">
+        <div class="user-details">
+          <div class="user-icon-wrapper">
+            <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Avatar" class="user-icon">
+          </div>
+          <div class="user-info">
+            <p class="username">Guest User</p>
+            <p class="user-status">Not logged in</p>
+          </div>
+        </div>
+        <a href="login.html" class="login-button">Sign In / Register</a>
+      </div>
+    
+      <div class="menu-category">
+        <h3 class="category-title">My Account</h3>
+        <ul class="side-links">
+          <li id="myTicketsBtn"><a href="#"><i class="fas fa-ticket-alt"></i> My Tickets</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+          <li><a href="#"><i class="fas fa-history"></i> Watch History</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </div>
+    
+      <div class="menu-category">
+        <h3 class="category-title">Information</h3>
+        <ul class="side-links">
+          <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Theaters</a></li>
+        </ul>
+      </div>
+    
+      <div class="side-menu-footer">
+        <p>© 2025 CinemaX</p>
+        <p class="version-info">App Version 2.1.0</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="news-container">
+    <h2 class="section-title">Upcoming News</h2>
+
+    <div class="news-grid">
+      <!-- Row 1 -->
+      <article class="news-card">
+        <img src="Joker2.jpg" alt="Joker 2" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Upcoming</span>
+          <h2 class="news-title">Joker 2: Coming October 2025</h2>
+          <p class="news-excerpt">Joker: Folie à Deux will explore Joker's relationship with Harley Quinn. Stars Joaquin Phoenix and Lady Gaga.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="LionMufasa.jpg" alt="Mufasa" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Upcoming</span>
+          <h2 class="news-title">Mufasa: The Lion King Prequel</h2>
+          <p class="news-excerpt">Disney's new animated prequel tells the story of Mufasa's early life. Releases December 2024.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="joy.jpg" alt="Joy Awards" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Events</span>
+          <h2 class="news-title">Joy Awards 2025: Full Winners List</h2>
+          <p class="news-excerpt">Tamer Hosny, Aseel Omran, and others win big at Joy Awards. A celebration of Arab talent in Riyadh.</p>
+        </div>
+      </article>
+
+      <!-- Row 2 -->
+      <article class="news-card">
+        <img src="ava.jpg" alt="Avatar 3" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Coming Soon</span>
+          <h2 class="news-title">Avatar 3 Delayed to 2026</h2>
+          <p class="news-excerpt">James Cameron confirms Avatar 3 will explore a new water-based tribe on Pandora. Expected release in 2026.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="dead.jpg" alt="Deadpool 3" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Marvel</span>
+          <h2 class="news-title">Deadpool 3 Joins the MCU</h2>
+          <p class="news-excerpt">Ryan Reynolds and Hugh Jackman return as Deadpool and Wolverine in a new R-rated Marvel adventure in July 2024.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="out.jpg" alt="Inside Out 2" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Animation</span>
+          <h2 class="news-title">Inside Out 2 Adds New Emotions</h2>
+          <p class="news-excerpt">Pixar’s sequel introduces Anxiety, Envy, and more in Riley’s teenage years. Releases June 2024.</p>
+        </div>
+      </article>
+
+      <!-- Row 3 -->
+      <article class="news-card">
+        <img src="bat.jpg" alt="The Batman 2" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">DC</span>
+          <h2 class="news-title">The Batman 2 in Production</h2>
+          <p class="news-excerpt">Robert Pattinson returns as the Dark Knight in the highly anticipated sequel set for 2025.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="glad.jpg" alt="Gladiator 2" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Historical</span>
+          <h2 class="news-title">Gladiator 2 Set for Late 2024</h2>
+          <p class="news-excerpt">Ridley Scott’s sequel stars Paul Mescal as Lucius. The film continues the Roman epic saga.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="dune.jpg" alt="Dune: Part Two" class="card-image" />
+        <div class="card-content">
+          <span class="news-category">Sci-Fi</span>
+          <h2 class="news-title">Dune: Part Two Coming November</h2>
+          <p class="news-excerpt">Timothée Chalamet and Zendaya return in the epic continuation of the Dune saga. Out in November 2024.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p> <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p> <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS File -->
+  <script src="news.js"></script>
+  
+</body>
+</html>

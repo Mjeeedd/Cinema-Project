@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CinemaX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Menu Toggle Button -->
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+
+      <!-- Logo Container -->
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <!-- Close Button -->
+      <div class="close-button" onclick="toggleSideMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <!-- User Section -->
+      <div class="user-section">
+        <div class="user-details">
+          <div class="user-icon-wrapper">
+            <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Avatar" class="user-icon">
+          </div>
+          <div class="user-info">
+            <p class="username">Guest User</p>
+            <p class="user-status">Not logged in</p>
+          </div>
+        </div>
+        <a href="login.html" class="login-button">Sign In / Register</a>
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-category">
+        <h3 class="category-title">My Account</h3>
+        <ul class="side-links">
+          <li id="myTicketsBtn"><a href="#"><i class="fas fa-ticket-alt"></i> My Tickets</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+          <li><a href="#"><i class="fas fa-history"></i> Watch History</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="category-title">Information</h3>
+        <ul class="side-links">
+          <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Theaters</a></li>
+        </ul>
+      </div>
+
+      <!-- Side Menu Footer -->
+      <div class="side-menu-footer">
+        <p>© 2025 CinemaX</p>
+        <p class="version-info">App Version 2.1.0</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Carousel Section -->
+  <section class="carousel">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="movie-slider" id="slider">
+      <!-- Movie cards will be added by JavaScript -->
+    </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section class="search-filter">
+    <div class="search-group">
+      <input type="text" placeholder="Search for a movie..." id="searchInput" oninput="showSuggestions()" onkeydown="handleEnter(event)" />
+      <button onclick="searchMovies()"><i class="fas fa-search"></i></button>
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+  </section>
+
+  <!-- Movie Sections -->
+  <section class="movie-section">
+    <div>
+      <h2>Now Showing</h2>
+      <div id="availableMovies" class="movie-slider collapsed"></div>
+      <!-- 'See More' button will be added by JavaScript -->
+    </div>
+    <div>
+      <h2>Coming Soon</h2>
+      <div id="comingSoonMovies" class="movie-slider collapsed"></div>
+      <!-- 'See More' button will be added by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Error Popup -->
+  <div id="errorPopup" class="popup">
+    <p id="errorMessage"></p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p> <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p> <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS File -->
+  <script src="index.js"></script>
+  <script src="ticket.js"></script>
+</body>
+</html>
