@@ -912,36 +912,76 @@ h2 {
       padding-top: 10px;
     }
   }
-  
-  /* Smallest screen (414px) */
-  @media (max-width: 414px) {
+    /* Mobile Scaling Mode (like desktop but smaller) */
+@media (max-width: 767px) {
+    /* Global Scaling */
+    body {
+        zoom: 0.8; /* تقليص حجم كل العناصر بنسبة 20% */
+        -moz-transform: scale(0.8);
+        -moz-transform-origin: 0 0;
+    }
+    
+    /* Adjustments for scaled content */
     .container {
-      width: 95%;
+        width: 95%;
+        max-width: none;
     }
     
-    .footer-content {
-      gap: 20px;
+    /* Header adjustments */
+    header nav {
+        padding: 10px 0;
     }
     
-    .footer-logo h2,
-    .footer-contact h3,
-    .footer-social h3 {
-      font-size: 16px;
-      padding-bottom: 8px;
+    .logo-text {
+        font-size: 20px;
     }
     
-    .footer-logo p,
-    .footer-contact p {
-      font-size: 12px;
+    /* Welcome section */
+    .welcome-section {
+        height: 50vh;
     }
     
-    .social-icons {
-      gap: 10px;
+    .welcome-content h1 {
+        font-size: 2.2rem;
     }
     
-    .social-icons a {
-      width: 30px;
-      height: 30px;
+    /* Side menu */
+    .side-menu {
+        width: 250px;
     }
-  }
-  
+    
+    /* Cards and items */
+    .stat-item, .feature-card, .team-member {
+        transform: scale(0.9);
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+/* Very Small Phones Scaling */
+@media (max-width: 480px) {
+    body {
+        zoom: 0.7; /* تقليص إضافي للشاشات الصغيرة جدًا */
+        -moz-transform: scale(0.7);
+    }
+    
+    /* Prevent elements from becoming too small */
+    .welcome-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .side-links li a {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    /* Ensure tap targets remain usable */
+    button, a {
+        min-width: 60px;
+        min-height: 40px;
+    }
+}
